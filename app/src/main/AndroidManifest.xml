@@ -3,20 +3,22 @@
     package="longteng.pda">
 
     <application
+        android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name">
+        android:label="@string/app_name"
+        android:supportsRtl="true">
         <activity
             android:name=".MainActivity"
-            android:allowBackup="true"
-            android:supportsRtl="true"
-            android:theme="@style/AppTheme">
+            android:theme="@style/Theme.login">
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:theme="@style/Theme.login" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>
