@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PDA盘点系统</string>
+    <string name="login_welcome">欢 迎 使 用</string>
+    <string name="login_pass">密码</string>
+    <string name="login_name">用户名</string>
+    <string name="login_company_name">优讯龙腾</string>
+    <string name="login_company_copyright"> © 2016 by longteng</string>
+
 </resources>

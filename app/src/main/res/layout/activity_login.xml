@@ -4,26 +4,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    android:background="#000000"
+    android:background="@drawable/bg"
     tools:context=".MainActivity" >
 
     <!-- LOGO -->
-
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:contentDescription="@string/app_name" />
 
     <!-- 头像 -->
 
     <ImageView
         android:id="@+id/login_img_photo"
-        android:layout_width="77dp"
-        android:layout_height="77dp"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="136dp"
         android:contentDescription="@string/app_name"
         android:scaleType="centerCrop"
         android:src="@drawable/default_photo" />
@@ -33,7 +26,7 @@
         android:layout_width="77dp"
         android:layout_height="77dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="135dp"
+        android:layout_marginTop="140dp"
         android:contentDescription="@string/app_name"
         android:src="@drawable/loading_1"
         android:visibility="gone" />
@@ -51,16 +44,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WELCOME"
+            android:text="@string/login_welcome"
             android:textColor="#ffffff"
-            android:textSize="17sp" />
+            android:textSize="20sp" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="欢迎访问"
+            android:text="@string/app_name"
             android:textColor="#ffffff"
-            android:textSize="18sp" />
+            android:textSize="20sp" />
     </LinearLayout>
 
     <!-- 中间的白线，滑动轨道 -->
@@ -96,7 +89,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="4dp"
         android:background="#00000000"
-        android:hint="手机号/昵称"
+        android:hint="@string/login_name"
         android:inputType="text"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
@@ -129,7 +122,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="4dp"
         android:background="#00000000"
-        android:hint="密码"
+        android:hint="@string/login_pass"
         android:inputType="textPassword"
         android:textColor="#ffffff"
         android:textColorHint="#ffffff"
@@ -149,34 +142,25 @@
         android:contentDescription="@string/app_name"
         android:visibility="gone" />
 
-    <!-- 左下角注册按钮 -->
-
-    <Button
-        android:id="@+id/login_btn_register"
+    <TextView
+        android:text="@string/login_company_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginLeft="60dp"
-        android:background="#00000000"
-        android:text="注册"
+        android:layout_marginBottom="50dp"
         android:textColor="#ffffff"
-        android:textSize="18sp" />
+        android:textSize="20sp"
+        android:drawableLeft="@drawable/ic_logo"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
-    <!-- 右下角游客登录按钮 -->
-
-    <Button
-        android:id="@+id/login_btn_traveller"
+    <TextView
+        android:text="@string/login_company_copyright"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="65dp"
-        android:layout_marginRight="60dp"
-        android:background="#00000000"
-        android:text="游客"
+        android:layout_marginBottom="19dp"
         android:textColor="#ffffff"
-        android:textSize="18sp" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 
 </RelativeLayout>

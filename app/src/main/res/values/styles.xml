@@ -1,9 +1,16 @@
 <resources>
 
-    <!-- Base application theme. -->
+    <!-- 登录状态栏颜色.-->
     <style name="Theme.login" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowTranslucentNavigation">true</item>
-        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/main_color</item>
     </style>
+    <!-- 主菜单状态栏颜色.-->
+    <style name="Theme.main" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <item name="android:statusBarColor">@color/main_color</item>
+    </style>
+
 </resources>

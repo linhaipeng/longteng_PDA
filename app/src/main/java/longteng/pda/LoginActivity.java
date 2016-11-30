@@ -41,8 +41,6 @@ public class LoginActivity extends Activity {
 	private ImageView moImgSlider;
 	private Button moBtnClearUsername;
 	private Button moBtnClearPassword;
-	private Button moBtnRegister;
-	private Button moBtnTraveller;
 
 	// Members
 	private Handler moHandler;
@@ -61,7 +59,6 @@ public class LoginActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_login);
-
 		setHandler();
 		initMembers();
 		setEventListeners();
@@ -91,8 +88,8 @@ public class LoginActivity extends Activity {
 						lmExtra = new HashMap<String, String>();
 						lmExtra.put("redirect", msRedirectPage);
 					}
-//					 Utils.gotoActivity(LoginActivity.this,
-//					MainActivity.class, true, lmExtra);
+					 Utils.gotoActivity(LoginActivity.this,
+					MainActivity.class, true, lmExtra);
 					break;
 				case LOGIN_FAILED:
 					// 登录失败
@@ -124,8 +121,7 @@ public class LoginActivity extends Activity {
 		moImgSlider = (ImageView) findViewById(R.id.login_img_slide);
 		moBtnClearUsername = (Button) findViewById(R.id.login_btn_clear_username);
 		moBtnClearPassword = (Button) findViewById(R.id.login_btn_clear_password);
-		moBtnRegister = (Button) findViewById(R.id.login_btn_register);
-		moBtnTraveller = (Button) findViewById(R.id.login_btn_traveller);
+//
 		mbIsSlidingBack = false;
 		miLastX = 0;
 		miSliderMinX = 0;
@@ -140,8 +136,8 @@ public class LoginActivity extends Activity {
 		moBtnClearPassword.setOnClickListener(new OnClearEditText());
 		moImgSlider.setOnClickListener(new OnSliderClicked());
 		moImgSlider.setOnTouchListener(new OnSliderDragged());
-		moBtnRegister.setOnClickListener(new OnRegister());
-		moBtnTraveller.setOnClickListener(new OnTravell());
+//		moBtnRegister.setOnClickListener(new OnRegister());
+//		moBtnTraveller.setOnClickListener(new OnTravell());
 	}
 
 	/************** 事件处理类 *******************************/
@@ -218,15 +214,14 @@ public class LoginActivity extends Activity {
 			}
 		}
 	}
-
 	// 滑动图标点击事件
 	private class OnSliderClicked implements OnClickListener {
 		@Override
 		public void onClick(View v) {
 			// 如果不符合登录条件 则跳转到忘记密码界面
 //			if (!canLogin())
-//				Utils.gotoActivity(LoginActivity.this, ForgetPwdActivity.class,
-//						false, null);
+				Utils.gotoActivity(LoginActivity.this, MainActivity.class,
+						false, null);
 		}
 	}
 
@@ -266,6 +261,7 @@ public class LoginActivity extends Activity {
 									.toString();
 							startLogin();
 							// TODO 调用借口
+
 						}
 					}
 					break;
@@ -280,24 +276,6 @@ public class LoginActivity extends Activity {
 		}
 	}
 
-	// 注册事件
-	private class OnRegister implements OnClickListener {
-		@Override
-		public void onClick(View v) {
-			showToast("注册");
-			// Utils.gotoActivity(LoginActivity.this,
-			// RegisterTypeActivity.class,
-			// false, null);
-		}
-	}
-
-	// 游客事件
-	private class OnTravell implements OnClickListener {
-		@Override
-		public void onClick(View v) {
-			showToast("游客");
-		}
-	}
 
 	// 根据是否可以登录，初始化相关控件
 	private void initWidgetForCanLogin() {
@@ -346,12 +324,6 @@ public class LoginActivity extends Activity {
 				R.anim.login_photo_scale_small);
 		// 匀速动画
 		LinearInterpolator linearInterpolator = new LinearInterpolator();
-		// 加速动画
-		// AccelerateInterpolator accelerateInterpolator = new
-		// AccelerateInterpolator();
-		// 弹跳动画
-		// BounceInterpolator bounceInterpolator = new BounceInterpolator();
-
 		loAnimRotate.setInterpolator(linearInterpolator);
 		loAnimScale.setInterpolator(linearInterpolator);
 		moImgProgress.setVisibility(View.VISIBLE);
@@ -364,8 +336,7 @@ public class LoginActivity extends Activity {
 		moEditPassword.setVisibility(View.GONE);
 		moBtnClearUsername.setVisibility(View.GONE);
 		moBtnClearPassword.setVisibility(View.GONE);
-		moBtnRegister.setVisibility(View.GONE);
-		moBtnTraveller.setVisibility(View.GONE);
+
 
 		moLayoutWelcome.setVisibility(View.VISIBLE);
 	}
@@ -387,8 +358,6 @@ public class LoginActivity extends Activity {
 		moEditPassword.setVisibility(View.VISIBLE);
 		moBtnClearUsername.setVisibility(View.VISIBLE);
 		moBtnClearPassword.setVisibility(View.VISIBLE);
-		moBtnRegister.setVisibility(View.VISIBLE);
-		moBtnTraveller.setVisibility(View.VISIBLE);
 		moLayoutWelcome.setVisibility(View.GONE);
 	}
 
