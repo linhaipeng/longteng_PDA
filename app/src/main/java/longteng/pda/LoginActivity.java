@@ -46,7 +46,6 @@ public class LoginActivity extends Activity {
 	private Handler moHandler;
 	private boolean mbIsSlidingBack;
 	private int miSliderMinX, miSliderMaxX, miLastX;
-	private String msRedirectPage;
 
 	// Constant
 	public static final int PASSWORD_MIN_LENGTH = 6;
@@ -83,13 +82,7 @@ public class LoginActivity extends Activity {
 				switch (poMsg.what) {
 				case LOGIN_SUCCESS:
 					// 登录成功
-					Map<String, String> lmExtra = null;
-					if (!Utils.isStrEmpty(msRedirectPage)) {
-						lmExtra = new HashMap<String, String>();
-						lmExtra.put("redirect", msRedirectPage);
-					}
-					 Utils.gotoActivity(LoginActivity.this,
-					MainActivity.class, true, lmExtra);
+
 					break;
 				case LOGIN_FAILED:
 					// 登录失败
@@ -136,8 +129,7 @@ public class LoginActivity extends Activity {
 		moBtnClearPassword.setOnClickListener(new OnClearEditText());
 		moImgSlider.setOnClickListener(new OnSliderClicked());
 		moImgSlider.setOnTouchListener(new OnSliderDragged());
-//		moBtnRegister.setOnClickListener(new OnRegister());
-//		moBtnTraveller.setOnClickListener(new OnTravell());
+
 	}
 
 	/************** 事件处理类 *******************************/
@@ -218,10 +210,8 @@ public class LoginActivity extends Activity {
 	private class OnSliderClicked implements OnClickListener {
 		@Override
 		public void onClick(View v) {
-			// 如果不符合登录条件 则跳转到忘记密码界面
-//			if (!canLogin())
-				Utils.gotoActivity(LoginActivity.this, MainActivity.class,
-						false, null);
+			//提示
+			Toast.makeText(LoginActivity.this,"向右滑动登录",Toast.LENGTH_SHORT).show();
 		}
 	}
 
@@ -261,7 +251,7 @@ public class LoginActivity extends Activity {
 									.toString();
 							startLogin();
 							// TODO 调用借口
-
+							login();
 						}
 					}
 					break;
@@ -275,7 +265,19 @@ public class LoginActivity extends Activity {
 			return false;
 		}
 	}
+	//登录操作
+	private void login(){
+		String loUsername = moEditUsername.getText().toString();
+		String loPassword = moEditPassword.getText().toString();
+		Map<String, String> lmExtra = null;
+		if (!Utils.isStrEmpty(loUsername)) {
+			lmExtra = new HashMap<String, String>();
+			lmExtra.put("redirect", loUsername);
+		}
+		 Utils.gotoActivity(LoginActivity.this,
+		 MainActivity.class, true, lmExtra);
 
+	}
 
 	// 根据是否可以登录，初始化相关控件
 	private void initWidgetForCanLogin() {
@@ -336,8 +338,6 @@ public class LoginActivity extends Activity {
 		moEditPassword.setVisibility(View.GONE);
 		moBtnClearUsername.setVisibility(View.GONE);
 		moBtnClearPassword.setVisibility(View.GONE);
-
-
 		moLayoutWelcome.setVisibility(View.VISIBLE);
 	}
 

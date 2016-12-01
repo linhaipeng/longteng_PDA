@@ -5,5 +5,9 @@
     <string name="login_name">用户名</string>
     <string name="login_company_name">优讯龙腾</string>
     <string name="login_company_copyright"> © 2016 by longteng</string>
+    <string name="main_menu">功能</string>
+    <string name="main_receipts">单据</string>
+    <string name="main_personal">我的</string>
+    <string name="main_settings">设置</string>
 
 </resources>
