@@ -13,16 +13,17 @@
     
     <ImageView
         android:id="@+id/iv_title_left"
-        android:layout_width="@dimen/tab_height"
-        android:layout_height="@dimen/tab_height"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
         android:layout_alignParentLeft="true"
         android:layout_centerVertical="true"
+        android:layout_marginLeft="9dp"
         android:scaleType="center"
         android:contentDescription="@null"
-        android:src="@drawable/btn_bar_back"
         android:visibility="invisible"
+        android:background="@drawable/btn_bar_back"
         tools:ignore="RtlHardcoded" />
-    
+
     <TextView
         android:id="@+id/tv_title_name"
         android:layout_width="wrap_content"

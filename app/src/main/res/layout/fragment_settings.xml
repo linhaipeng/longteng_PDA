@@ -7,9 +7,7 @@
     <include
         android:layout_width="match_parent"
         android:layout_height="@dimen/tab_height"
-        layout="@layout/pl_title"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        layout="@layout/pl_title" />
 
     <View
         android:layout_width="match_parent"
@@ -84,7 +82,7 @@
         <Switch
             android:layout_width="@dimen/view_height"
             android:layout_height="@dimen/view_height"
-            android:id="@+id/switch_voice"
+            android:id="@+id/switch_sound"
             android:layout_marginRight="24dp"
             android:layout_alignParentRight="true"
             />
@@ -104,12 +102,12 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_gravity="center"
+        android:id="@+id/help"
         android:layout_height="@dimen/view_height" >
 
         <ImageView
             android:layout_width="@dimen/ic_height"
             android:layout_height="@dimen/ic_height"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:layout_marginLeft="@dimen/view_horizontal_margin"
@@ -139,12 +137,12 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_gravity="center"
+        android:id="@+id/problem"
         android:layout_height="@dimen/view_height" >
 
         <ImageView
             android:layout_width="@dimen/ic_height"
             android:layout_height="@dimen/ic_height"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/view_horizontal_margin"
             android:contentDescription="@null"
@@ -180,12 +178,12 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_gravity="center"
+        android:id="@+id/call"
         android:layout_height="@dimen/view_height" >
 
         <ImageView
             android:layout_width="@dimen/ic_height"
             android:layout_height="@dimen/ic_height"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:contentDescription="@null"
             android:layout_marginLeft="@dimen/view_horizontal_margin"
@@ -215,12 +213,12 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_gravity="center"
+        android:id="@+id/about"
         android:layout_height="@dimen/view_height" >
 
         <ImageView
             android:layout_width="@dimen/ic_height"
             android:layout_height="@dimen/ic_height"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/view_horizontal_margin"
             android:contentDescription="@null"
@@ -251,12 +249,12 @@
         android:layout_width="match_parent"
         android:background="@color/white"
         android:layout_gravity="center"
+        android:id="@+id/update"
         android:layout_height="@dimen/view_height" >
 
         <ImageView
             android:layout_width="@dimen/ic_height"
             android:layout_height="@dimen/ic_height"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
             android:layout_marginLeft="@dimen/view_horizontal_margin"
             android:contentDescription="@null"
@@ -306,6 +304,7 @@
         android:layout_width="match_parent"
         android:background="@color/red"
         android:layout_gravity="center"
+        android:id="@+id/out"
         android:layout_height="@dimen/view_height" >
 
         <TextView

@@ -9,6 +9,9 @@ import android.content.Intent;
 import android.text.Editable;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import longteng.pda.R;
 
 public class Utils {
 
@@ -26,6 +29,7 @@ public class Utils {
 		if (pbFinish)
 			poFrom.finish();
 		poFrom.startActivity(loIntent);
+		poFrom.overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
 	}
 
 	// 字符串是否为空（全是不可见字符的字符串认为是空）
@@ -33,12 +37,18 @@ public class Utils {
 		String lsStr = poStr.toString();
 		return isStrEmpty(lsStr);
 	}
-
+	//结束界面
+    public static void finishActivity(Activity poFrom){
+		poFrom.finish();
+		poFrom.overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
+	}
 	// 字符串是否为空（全是不可见字符的字符串认为是空）
 	public static boolean isStrEmpty(String psStr) {
 		return psStr == null || psStr.trim().length() == 0;
 	}
-
+	public static void show(Context context,String text){
+		Toast.makeText(context,text,Toast.LENGTH_SHORT);
+	}
 	/**
 	 * 关闭软键盘
 	 * @param mEditText

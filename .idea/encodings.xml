@@ -11,8 +11,12 @@
     <file url="file://$PROJECT_DIR$/app/src/main/java/longteng/pda/utils/TipHelper.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/longteng/pda/widget/LoadingDialog.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/src/main/java/longteng/pda/widget/MessageDialog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/push_left_in.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/anim/push_left_out.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim/push_right_in.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/anim/push_right_out.xml" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_bar_back.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/btn_bar_back.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/dialog_btn_font1_style.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/dialog_btn_font2_style.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/dialog_btn_style.xml" charset="GBK" />
@@ -28,6 +32,9 @@
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_problem.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_problem.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/ic_voice.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/im_logo.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/im_logo.png" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/im_map.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/drawable/use.png" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_layout.xml" charset="GBK" />
     <file url="file://$PROJECT_DIR$/app/src/main/res/raw" charset="GBK" />

@@ -10,8 +10,6 @@
     android:background="@color/white"
     tools:context="longteng.pda.activity.MainActivity">
 
-
-
     <fragment
         android:id="@+id/fragement_menu"
         android:name="longteng.pda.fragment.FragmentMenu"
