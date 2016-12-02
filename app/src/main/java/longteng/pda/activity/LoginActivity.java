@@ -1,4 +1,4 @@
-package longteng.pda;
+package longteng.pda.activity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -23,6 +23,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import longteng.pda.R;
 import longteng.pda.utils.Utils;
 
 /****

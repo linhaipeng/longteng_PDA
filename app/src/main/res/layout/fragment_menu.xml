@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/sys_bg"
     android:layout_height="match_parent">
     <include
         android:layout_width="match_parent"
@@ -10,9 +11,225 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
-    <TextView
-        android:text="功能"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView4" />
+        android:layout_height="match_parent"
+        android:layout_marginBottom="80dp"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:scrollbars="none"
+        >
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:columnCount="3"
+            android:numColumns="auto_fit"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/menu_take_stock"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_take_stock_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_take_stock"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_take_stock"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_sales_volume"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_sales_volume_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_sales_volume"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_sales_volume"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_order_put"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_order_put_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_order_put"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_order_put"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_copy_sheet"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_copy_sheet_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_copy_sheet"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_copy_sheet"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_quick_take_stock"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_quick_take_stock_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_quick_take_stock"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_quick_take_stock"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_tag_print"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_tag_print_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_copy_sheet"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_tag_print"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_inventory"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_inventory_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_inventory"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_inventory"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_no_order_put"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_no_order_put_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_no_order_put"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_no_order_put"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/menu_replenishment"
+                android:layout_width="@dimen/menu_width"
+                android:layout_height="@dimen/menu_height"
+                android:layout_margin="@dimen/view_vertical_margin"
+                android:background="@drawable/sp_menu_replenishment_bg"
+                android:gravity="center"
+                android:orientation="vertical" >
+
+                <ImageView
+                    android:layout_width="@dimen/menu_btn_size"
+                    android:layout_height="@dimen/menu_btn_size"
+                    android:background="@drawable/menu_replenishment"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/menu_replenishment"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+        </GridLayout>
+    </ScrollView>
 </LinearLayout>

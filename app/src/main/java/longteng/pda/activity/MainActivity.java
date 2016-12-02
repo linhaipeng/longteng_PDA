@@ -1,26 +1,29 @@
-package longteng.pda;
+package longteng.pda.activity;
 
 import android.graphics.Color;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.RadioGroup;
 
+import longteng.pda.R;
 import longteng.pda.view.NavbarRadioButton;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     private Fragment[] mFragments;
     private NavbarRadioButton nav_menu, nav_receipts, nav_personal, nav_settings;
     private RadioGroup nav_bar;
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setTheme(R.style.Color1SwitchStyle);
         setContentView(R.layout.activity_main);
         mFragments = new Fragment[4];
         fragmentManager = getSupportFragmentManager();
@@ -35,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
         setFragmentIndicator();
 
     }
+
+
+
     private void setFragmentIndicator() {
 
         nav_menu = (NavbarRadioButton) findViewById(R.id.nav_menu);
@@ -75,4 +81,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+
 }

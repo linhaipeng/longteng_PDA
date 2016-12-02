@@ -10,4 +10,24 @@
     <string name="main_personal">我的</string>
     <string name="main_settings">设置</string>
 
+    <string name="menu_take_stock">实盘盘点</string>
+    <string name="menu_sales_volume">单品销量</string>
+    <string name="menu_order_put">订单入库</string>
+    <string name="menu_copy_sheet">盘点抄写表</string>
+    <string name="menu_quick_take_stock">快速盘点</string>
+    <string name="menu_tag_print">标签打印</string>
+    <string name="menu_inventory">商品库存</string>
+    <string name="menu_no_order_put">无订单入库</string>
+    <string name="menu_replenishment">商品补货</string>
+
+    <string name="dialog_message">提示内容</string>
+    <string name="dialog_btn_cancel">取消</string>
+    <string name="dialog_btn_confirm">确定</string>
+
+    <string name="name_default">000000</string>
+    <string name="line">允许一码多行</string>
+    <string name="record">操作记录</string>
+    <string name="pen">允许手工输入</string>
+
+
 </resources>

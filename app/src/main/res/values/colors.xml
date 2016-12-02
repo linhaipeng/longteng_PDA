@@ -5,6 +5,45 @@
     <color name="colorAccent">#FF4081</color>
     <color name="main_color">#03a9f4</color>
     <color name="white">#FFFFFF</color>
-    <color name="sys_bg">#F7F7F7</color>
+    <color name="nav_gray">#F8F8F8</color>
+    <color name="sys_bg">#F2F0F0</color>
     <color name="gray">#8a8a8a</color>
+    <color name="list_gray">#bbbbbb</color>
+
+    //实盘盘点
+    <color name="menu_take_stock">#26c6da</color>
+    <color name="menu_take_stock_press">#00acc1</color>
+    //单品销量
+    <color name="menu_sales_volume">#5c6bc0</color>
+    <color name="menu_sales_volume_press">#3949ab</color>
+    //订单入库
+    <color name="menu_order_put">#7e57c2</color>
+    <color name="menu_order_put_press">#5e35b1</color>
+    //盘点抄写表
+    <color name="menu_copy_sheet">#26a69a</color>
+    <color name="menu_copy_sheet_press">#00897b</color>
+    //快速盘点
+    <color name="menu_quick_take_stock">#ab47bc</color>
+    <color name="menu_quick_take_stock_press">#8e24aa</color>
+    //标签打印
+    <color name="menu_tag_print">#ffa726</color>
+    <color name="menu_tag_print_press">#fb8c00</color>
+    //商品库存
+    <color name="menu_inventory">#2baf2b</color>
+    <color name="menu_inventory_press">#0a8f08</color>
+    //无订单入库
+    <color name="menu_no_order_put">#ff6091</color>
+    <color name="menu_no_order_put_press">#d81b60</color>
+    //商品补货
+    <color name="menu_replenishment">#ff7043</color>
+    <color name="menu_replenishment_press">#f4511e</color>
+
+    <color name="bbutton_edittext_border">#ccc</color>
+    <color name="bbutton_edittext_disabled">#ffe0e0e0</color>
+    <color name="bbutton_primary">#ff428bca</color>
+    <color name="col_transparent">#00000000</color><!-- 透明 -->
+    <color name="blue">#3366CC</color><!-- 蓝色 -->
+    <color name="red">#e84e40</color><!-- 红色 -->
+    <color name="red_line">#dd191d</color><!-- 红色 -->
+    <color name="black">#282828</color><!-- 黑色 -->
 </resources>
