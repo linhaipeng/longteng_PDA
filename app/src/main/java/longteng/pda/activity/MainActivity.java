@@ -1,14 +1,18 @@
 package longteng.pda.activity;
 
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 
 import longteng.pda.R;
+import longteng.pda.utils.Utils;
 import longteng.pda.view.NavbarRadioButton;
 
 public class MainActivity extends BaseActivity {
@@ -18,12 +22,19 @@ public class MainActivity extends BaseActivity {
     private FragmentManager fragmentManager;
     private FragmentTransaction fragmentTransaction;
     private String TAG = "MainActivity";
-
+    private ImageView scanner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setTheme(R.style.Color1SwitchStyle);
         setContentView(R.layout.activity_main);
+        scanner = (ImageView)findViewById(R.id.ImageButton) ;
+        scanner.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Utils.gotoActivity(MainActivity.this,ScannerActivity.class,false,null);
+            }
+        });
         mFragments = new Fragment[4];
         fragmentManager = getSupportFragmentManager();
         mFragments[0] = fragmentManager.findFragmentById(R.id.fragement_menu);

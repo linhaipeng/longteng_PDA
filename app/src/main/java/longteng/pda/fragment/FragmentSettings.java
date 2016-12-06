@@ -9,11 +9,11 @@ import android.widget.CompoundButton;
 import android.widget.RelativeLayout;
 import android.widget.Switch;
 import android.widget.TextView;
-
 import longteng.pda.Application;
 import longteng.pda.R;
 import longteng.pda.activity.AboutActivity;
 import longteng.pda.activity.ContactActivity;
+import longteng.pda.activity.UpdateActivity;
 import longteng.pda.service.PreferencesService;
 import longteng.pda.utils.Utils;
 
@@ -41,7 +41,6 @@ public class FragmentSettings extends Fragment implements View.OnClickListener {
             application = (Application) getActivity().getApplication();
             preferencesService = application.getPreferencesService();
             init();
-
         }
 
     public void init() {
@@ -61,10 +60,10 @@ public class FragmentSettings extends Fragment implements View.OnClickListener {
         Sound.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                    preferencesService.saveSound(isChecked);
+                preferencesService.saveSound(isChecked);
             }
         });
-        OfflineData.setChecked(preferencesService.getSound());
+        Sound.setChecked(preferencesService.getSound());
         OfflineData = (Switch)getView().findViewById(R.id.switch_db);
         OfflineData.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -72,8 +71,7 @@ public class FragmentSettings extends Fragment implements View.OnClickListener {
                 preferencesService.saveOfflineData(isChecked);
             }
         });
-        OfflineData.setChecked(preferencesService.getSound());
-
+        OfflineData.setChecked(preferencesService.getOfflineData());
     }
 
     @Override
@@ -90,8 +88,8 @@ public class FragmentSettings extends Fragment implements View.OnClickListener {
                 Utils.gotoActivity(getActivity(), AboutActivity.class,false,null);
                 break;
             case R.id.update:
+                Utils.gotoActivity(getActivity(), UpdateActivity.class,false,null);
                 break;
-
         }
     }
 }

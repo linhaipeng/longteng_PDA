@@ -18,7 +18,6 @@ public class Application extends android.app.Application{
         }
     }
 
-
     public PreferencesService getPreferencesService() {
         return PreferencesService;
     }

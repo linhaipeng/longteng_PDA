@@ -31,7 +31,7 @@ import longteng.pda.utils.Utils;
  * 
  * @author Administrator
  */
-public class LoginActivity extends Activity {
+public class LoginActivity extends BaseActivity {
 
 	// Widgets
 	private ImageView moImgPhoto;
@@ -63,7 +63,6 @@ public class LoginActivity extends Activity {
 		setHandler();
 		initMembers();
 		setEventListeners();
-
 	}
 
 	// 触摸登录界面收回键盘
@@ -116,7 +115,6 @@ public class LoginActivity extends Activity {
 		moImgSlider = (ImageView) findViewById(R.id.login_img_slide);
 		moBtnClearUsername = (Button) findViewById(R.id.login_btn_clear_username);
 		moBtnClearPassword = (Button) findViewById(R.id.login_btn_clear_password);
-//
 		mbIsSlidingBack = false;
 		miLastX = 0;
 		miSliderMinX = 0;

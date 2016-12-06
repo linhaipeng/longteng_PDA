@@ -1,6 +1,5 @@
 package longteng.pda.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -9,7 +8,7 @@ import android.widget.TextView;
 import longteng.pda.R;
 import longteng.pda.utils.Utils;
 
-public class AboutActivity extends AppCompatActivity {
+public class AboutActivity extends BaseActivity {
     private TextView tv_title_name;
     private ImageView iv_title_left;
     @Override

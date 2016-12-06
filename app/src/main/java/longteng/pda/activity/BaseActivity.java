@@ -10,10 +10,15 @@ import android.text.TextUtils;
 import android.view.MenuItem;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AbsListView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.Toast;
 
+import longteng.pda.Application;
 import longteng.pda.R;
 import longteng.pda.common.CommonHelper;
+import longteng.pda.service.PreferencesService;
 import longteng.pda.utils.LogUtils;
 import longteng.pda.utils.MessageHelper;
 import longteng.pda.utils.ScanerUtils;
@@ -27,8 +32,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected Context mContext;
     protected Activity mActivity;
     private LoadingDialog mLoadingDialog;
-    private boolean mIsOpenScan = false; // 标识是否已打开扫描
 
+    private boolean mIsOpenScan = false; // 标识是否已打开扫描
+    private Application application;
+    private PreferencesService preferencesService;
 
     @Override
     protected void onDestroy() {
@@ -56,12 +63,12 @@ public abstract class BaseActivity extends AppCompatActivity {
 
         mContext = this;
         mActivity = this;
-
+        application = (Application) getApplication();
+        preferencesService = application.getPreferencesService();
         // 实例加载动画并设置属性
         this.mLoadingDialog = new LoadingDialog(this);
         this.mLoadingDialog.setCanceledOnTouchOutside(false);
         this.mLoadingDialog.setCancelable(false);
-
     }
 
     @Override
@@ -76,7 +83,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         closeKeyboard();
         overridePendingTransition(R.anim.push_right_in, R.anim.push_right_out);
     }
-
 
     public void closeKeyboard() {
         InputMethodManager imm = (InputMethodManager) this.getSystemService(Context.INPUT_METHOD_SERVICE);

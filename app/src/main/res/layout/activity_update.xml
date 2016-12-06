@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_update"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:clipToPadding="true"
+    android:background="@color/sys_bg"
+    tools:context="longteng.pda.activity.UpdateActivity">
+
+    <include
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:layout_alignParentTop="true"
+        layout="@layout/pl_title"
+        />
+
+    <ImageView
+        android:id="@+id/im_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/im_update"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="@dimen/activity_vertical_margin" />
+
+    <TextView
+        android:id="@+id/tv_hint1"
+        android:text="已是最新版本"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_below="@+id/im_update"
+        android:textColor="@color/main_color"
+         />
+
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="#FFF"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:scrollbars="vertical"
+        android:text="跟新内容"
+        android:scrollbarStyle="outsideOverlay"
+        android:padding="10dp"
+        android:scrollbarFadeDuration="2000"
+        android:layout_below="@+id/tv_hint1"
+        android:layout_marginLeft="@dimen/view_horizontal_margin"
+        android:layout_marginRight="@dimen/view_horizontal_margin"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="当前版本:V1.0.0 最新版本:V1.0.0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/rl_update"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:id="@+id/tv_hint2" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_color"
+        android:layout_gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rl_update"
+        android:layout_height="@dimen/view_height" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:text="下载跟新"
+            />
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -29,7 +29,28 @@
         <activity
             android:name=".activity.AboutActivity"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.login"></activity>
+            android:theme="@style/Theme.login" />
+        <activity
+            android:name=".activity.UpdateActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.login" />
+        <activity
+            android:name=".activity.GenerateDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.login" />
+        <activity
+            android:name=".activity.DownloadDataActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.login" />
+        <activity
+            android:name=".activity.TakeStockActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.menu_take_stock" />
+        <activity
+            android:name=".activity.ScannerActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.login"
+            ></activity>
     </application>
 
 </manifest>

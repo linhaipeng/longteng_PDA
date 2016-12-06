@@ -26,6 +26,5 @@ public class FragmentReceipts extends Fragment {
             super.onActivityCreated(savedInstanceState);
             tv_title_name = (TextView) getView().findViewById(R.id.tv_title_name);
             tv_title_name.setText("单据");
-
         }
 }
