@@ -9,12 +9,25 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class CommonHelper {
+
+    //程序数据库名
+    public static final String APP_DB_NAME = "longteng.db";
+    //服务器数据库名
+    public static final String SERVER_DB_NAME = "longteng.db";
+
+    public static final String SQL_CREATE_TABLE_ORDER = "CREATE TABLE  Order_List( " + "id INTEGER PRIMARY KEY ON CONFLICT FAIL AUTOINCREMENT,"
+            // 单据编码              //单据名称            //创建时间
+            + " OrderNO varchar(20) ,OrderName varchar(20) ,CreateTime varchar(20) ," +
+            //修改时间					//备注			    //商品品项
+            " AmendTime varchar(20)  ,Remark  varchar(20)  , Items varchar(20), " +
+            //商品总数
+            " SUM varchar(20));";
+
     public static final String IP = "IP";
     public static final String PORT = "PORT";
     public static final String DBNAME = "DB";
     public static final String DBUSER = "USER";
     public static final String DBPASS = "PASS";
-
     public static int fenye = 0;
 
     /**

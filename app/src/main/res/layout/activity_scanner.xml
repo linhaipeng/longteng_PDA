@@ -6,9 +6,53 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
     android:clipToPadding="true"
+    android:orientation="vertical"
     tools:context="longteng.pda.activity.ScannerActivity">
 
+    <include
+        android:id="@+id/bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_height"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        layout="@layout/pl_title"
+        />
+    <ListView
+        android:id="@+id/lv_data"
+        android:layout_below="@+id/bar"
+        android:layout_above="@+id/rl_add"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textSize="16sp"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:dividerHeight="1dp" >
+    </ListView>
 
-
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@color/main_color"
+        android:layout_gravity="center"
+        android:id="@+id/rl_add"
+        android:layout_weight="1"
+        android:layout_height="@dimen/view_height"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+        <Spinner
+            android:id="@+id/sp_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+        <ImageButton
+            android:id="@+id/btn_add"
+            android:layout_width="@dimen/view_height"
+            android:layout_height="@dimen/view_height"
+            android:background="@drawable/btn_add"
+            android:layout_alignRight="@+id/sp_list"
+            />
+    </RelativeLayout>
 
 </RelativeLayout>
